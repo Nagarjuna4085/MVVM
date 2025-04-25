@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MVVM"
+             x:DataType="viewmodel:AddViewModel"
+             x:Class="MVVM.AddPage"
+             Title="AddPage">
+
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Margin="0,10,5,25">
+        <Label 
+            Text="Addition"
+            FontSize="Header"
+            TextColor="LightGreen"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+        <Entry Text="{Binding FirstNumber}" Placeholder="Enter First Number " Margin="0,10,0,10"/>
+        <Entry Text="{Binding SecondNumber}" Placeholder="Enter Second Number " Margin="0,10,0,10" />
+        <Button Text="{Binding Total}" Command="{Binding ResetCommand }"  Margin="0,10,0,10" />
+
+
+    </VerticalStackLayout>
+</ContentPage>

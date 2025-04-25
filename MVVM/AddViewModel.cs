@@ -13,7 +13,17 @@ namespace MVVM
         [NotifyPropertyChangedFor(nameof(Total))]
         private int secondNumber;
 
-       public int Total => FirstNumber + SecondNumber;
+       //public int Total => FirstNumber + SecondNumber; 
+
+        // above and below are same
+
+       public int Total
+        {
+            get
+            {
+                return FirstNumber + SecondNumber;
+            }
+        }
 
         [RelayCommand]
         void Reset()
